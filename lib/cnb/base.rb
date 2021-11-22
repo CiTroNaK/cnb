@@ -27,7 +27,7 @@ module CNB
     end
 
     def source_for(date)
-      Nokogiri::XML(open(url_for(date)))
+      Nokogiri::XML(URI.open(url_for(date)))
     end
 
     def match_parsed_date?(date)
